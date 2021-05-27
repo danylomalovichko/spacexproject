@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--dragonTitle-->
+        <!--Dragon Title-->
         <scene sceneID="LE0-is-z3x">
             <objects>
                 <viewController id="Mul-Rb-u4B" customClass="DragonDetailsViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-YE-Oob">
-                                <rect key="frame" x="20" y="498" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AFr-40-p6M">
                                 <rect key="frame" x="0.0" y="88" width="414" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,29 +34,43 @@
                                     <outlet property="delegate" destination="Mul-Rb-u4B" id="ntV-Gf-t9w"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeightKg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amj-IY-qqp">
-                                <rect key="frame" x="20" y="528.5" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-YE-Oob">
+                                <rect key="frame" x="20" y="498" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amj-IY-qqp">
+                                <rect key="frame" x="20" y="525" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBc-nv-iK6">
-                                <rect key="frame" x="20" y="559.5" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="552" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstFlight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNz-05-ei3">
-                                <rect key="frame" x="20" y="590.5" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Flight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNz-05-ei3">
+                                <rect key="frame" x="20" y="579" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jI-xb-qld">
+                                <rect key="frame" x="20" y="606" width="374" height="30"/>
+                                <state key="normal" title="Wikipedia Link"/>
+                                <connections>
+                                    <action selector="wikiLinkAction:" destination="Mul-Rb-u4B" eventType="touchUpInside" id="uIG-pX-vlT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dax-ah-fHf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lBc-nv-iK6" firstAttribute="top" secondItem="amj-IY-qqp" secondAttribute="bottom" constant="10" id="0Tq-zR-wdy"/>
+                            <constraint firstItem="2jI-xb-qld" firstAttribute="top" secondItem="cNz-05-ei3" secondAttribute="bottom" constant="10" id="0cq-cb-QiD"/>
                             <constraint firstItem="amj-IY-qqp" firstAttribute="leading" secondItem="Dax-ah-fHf" secondAttribute="leading" constant="20" id="1EZ-oO-I8q"/>
                             <constraint firstItem="Dax-ah-fHf" firstAttribute="trailing" secondItem="lBc-nv-iK6" secondAttribute="trailing" constant="20" id="1gP-Sg-dAh"/>
                             <constraint firstItem="9mt-YE-Oob" firstAttribute="top" secondItem="AFr-40-p6M" secondAttribute="bottom" constant="10" id="235-Yt-ard"/>
@@ -70,17 +78,19 @@
                             <constraint firstItem="Dax-ah-fHf" firstAttribute="trailing" secondItem="AFr-40-p6M" secondAttribute="trailing" id="AIV-9a-XxF"/>
                             <constraint firstItem="Dax-ah-fHf" firstAttribute="trailing" secondItem="cNz-05-ei3" secondAttribute="trailing" constant="20" id="Bee-a8-qjw"/>
                             <constraint firstItem="AFr-40-p6M" firstAttribute="top" secondItem="Dax-ah-fHf" secondAttribute="top" id="MVG-G2-j00"/>
+                            <constraint firstItem="2jI-xb-qld" firstAttribute="leading" secondItem="Dax-ah-fHf" secondAttribute="leading" constant="20" id="MfC-7A-AGj"/>
                             <constraint firstItem="cNz-05-ei3" firstAttribute="top" secondItem="lBc-nv-iK6" secondAttribute="bottom" constant="10" id="PLy-8H-QBH"/>
                             <constraint firstItem="amj-IY-qqp" firstAttribute="top" secondItem="9mt-YE-Oob" secondAttribute="bottom" constant="10" id="RQV-T7-jnm"/>
                             <constraint firstItem="lBc-nv-iK6" firstAttribute="leading" secondItem="Dax-ah-fHf" secondAttribute="leading" constant="20" id="b2B-gT-GuX"/>
                             <constraint firstItem="Dax-ah-fHf" firstAttribute="trailing" secondItem="amj-IY-qqp" secondAttribute="trailing" constant="20" id="h00-3d-hoe"/>
+                            <constraint firstItem="Dax-ah-fHf" firstAttribute="trailing" secondItem="2jI-xb-qld" secondAttribute="trailing" constant="20" id="u5W-d4-Vaa"/>
                             <constraint firstItem="cNz-05-ei3" firstAttribute="leading" secondItem="Dax-ah-fHf" secondAttribute="leading" constant="20" id="v3I-f9-PvB"/>
                             <constraint firstItem="AFr-40-p6M" firstAttribute="leading" secondItem="Dax-ah-fHf" secondAttribute="leading" id="w65-gp-oAf"/>
                             <constraint firstItem="9mt-YE-Oob" firstAttribute="leading" secondItem="Dax-ah-fHf" secondAttribute="leading" constant="20" id="ypY-pX-kG8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="dragonTitle" id="OEr-bo-NsQ"/>
+                    <navigationItem key="navigationItem" title="Dragon Title" id="OEr-bo-NsQ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="AFr-40-p6M" id="mhi-RQ-GhG"/>
@@ -92,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSu-eP-0MA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1635" y="57"/>
+            <point key="canvasLocation" x="-1636.2318840579712" y="56.919642857142854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aQj-Un-G6R">

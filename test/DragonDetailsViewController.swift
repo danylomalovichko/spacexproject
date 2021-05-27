@@ -39,6 +39,10 @@ class DragonDetailsViewController: UIViewController, UICollectionViewDataSource,
         cell.setup(imageURL: dragon?.images[indexPath.row])
         return cell
     }
+    @IBAction func wikiLinkAction(_ sender: Any) {
+        guard let wikipedia = dragon?.wikipedia else { return }
+        UIApplication.shared.open(wikipedia)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.bounds.size 
