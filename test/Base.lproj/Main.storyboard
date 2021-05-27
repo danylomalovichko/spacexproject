@@ -120,17 +120,22 @@
             </objects>
             <point key="canvasLocation" x="-3561" y="57"/>
         </scene>
-        <!--View Controller-->
+        <!--Dragons List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dragons List" id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Hx-CN-HlQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Space" translatesAutoresizingMaskIntoConstraints="NO" id="iqI-rr-blU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Hx-CN-HlQ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Cdm-ns-bT0"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="g3o-0Y-2pV"/>
@@ -138,15 +143,19 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="iqI-rr-blU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9jJ-1W-bdi"/>
+                            <constraint firstAttribute="trailing" secondItem="iqI-rr-blU" secondAttribute="trailing" id="CGu-x8-48V"/>
                             <constraint firstItem="5Hx-CN-HlQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NmA-Cm-Zyf"/>
                             <constraint firstItem="5Hx-CN-HlQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WpB-o7-vgW"/>
+                            <constraint firstAttribute="bottom" secondItem="iqI-rr-blU" secondAttribute="bottom" id="Y8g-0D-UEA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Hx-CN-HlQ" secondAttribute="trailing" id="hwa-9H-p2d"/>
+                            <constraint firstItem="iqI-rr-blU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ll6-WI-Hzt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Hx-CN-HlQ" secondAttribute="bottom" id="vHl-rr-pgA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GXZ-V7-kMI"/>
+                    <navigationItem key="navigationItem" title="Dragons List" id="GXZ-V7-kMI"/>
                     <connections>
                         <outlet property="tableView" destination="5Hx-CN-HlQ" id="kwH-D8-e65"/>
                         <segue destination="Mul-Rb-u4B" kind="show" identifier="toDragonDetails" id="bGE-Sh-QXu"/>
@@ -158,6 +167,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Space" width="1920" height="859"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

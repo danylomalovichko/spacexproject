@@ -15,7 +15,7 @@ class DragonCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .clear
     }
 
     func setup(dragon: Dragon) {
