@@ -1,6 +1,6 @@
 //
-//  testUITests.swift
-//  testUITests
+//  SpaceXUITests.swift
+//  SpaceXUITests
 //
 //  Created by ovr on 19.05.2021.
 //

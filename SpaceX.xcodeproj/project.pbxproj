@@ -21,8 +21,8 @@
 		E896968326551A20009A6126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E896968126551A20009A6126 /* Main.storyboard */; };
 		E896968526551A21009A6126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E896968426551A21009A6126 /* Assets.xcassets */; };
 		E896968826551A21009A6126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E896968626551A21009A6126 /* LaunchScreen.storyboard */; };
-		E896969326551A21009A6126 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896969226551A21009A6126 /* testTests.swift */; };
-		E896969E26551A21009A6126 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896969D26551A21009A6126 /* testUITests.swift */; };
+		E896969326551A21009A6126 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896969226551A21009A6126 /* SpaceXTests.swift */; };
+		E896969E26551A21009A6126 /* SpaceXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896969D26551A21009A6126 /* SpaceXUITests.swift */; };
 		E89696B026551A55009A6126 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E89696AF26551A55009A6126 /* Alamofire */; };
 		E8C413D6265C22570019ABBB /* DragonImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C413D4265C22570019ABBB /* DragonImageCell.swift */; };
 		E8C413D7265C22570019ABBB /* DragonImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8C413D5265C22570019ABBB /* DragonImageCell.xib */; };
@@ -62,10 +62,10 @@
 		E896968726551A21009A6126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E896968926551A21009A6126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E896968E26551A21009A6126 /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E896969226551A21009A6126 /* testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTests.swift; sourceTree = "<group>"; };
+		E896969226551A21009A6126 /* SpaceXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXTests.swift; sourceTree = "<group>"; };
 		E896969426551A21009A6126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E896969926551A21009A6126 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E896969D26551A21009A6126 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
+		E896969D26551A21009A6126 /* SpaceXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXUITests.swift; sourceTree = "<group>"; };
 		E896969F26551A21009A6126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C413D4265C22570019ABBB /* DragonImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonImageCell.swift; sourceTree = "<group>"; };
 		E8C413D5265C22570019ABBB /* DragonImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DragonImageCell.xib; sourceTree = "<group>"; };
@@ -101,9 +101,9 @@
 		E896966F26551A20009A6126 = {
 			isa = PBXGroup;
 			children = (
-				E896967A26551A20009A6126 /* test */,
-				E896969126551A21009A6126 /* testTests */,
-				E896969C26551A21009A6126 /* testUITests */,
+				E896967A26551A20009A6126 /* SpaceX */,
+				E896969126551A21009A6126 /* SpaceXTests */,
+				E896969C26551A21009A6126 /* SpaceXUITests */,
 				E896967926551A20009A6126 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E896967A26551A20009A6126 /* test */ = {
+		E896967A26551A20009A6126 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
 				E896967B26551A20009A6126 /* AppDelegate.swift */,
@@ -138,25 +138,25 @@
 				E847F003265ADCD20061655A /* DragonCell.swift */,
 				E847F004265ADCD20061655A /* DragonCell.xib */,
 			);
-			path = test;
+			path = SpaceX;
 			sourceTree = "<group>";
 		};
-		E896969126551A21009A6126 /* testTests */ = {
+		E896969126551A21009A6126 /* SpaceXTests */ = {
 			isa = PBXGroup;
 			children = (
-				E896969226551A21009A6126 /* testTests.swift */,
+				E896969226551A21009A6126 /* SpaceXTests.swift */,
 				E896969426551A21009A6126 /* Info.plist */,
 			);
-			path = testTests;
+			path = SpaceXTests;
 			sourceTree = "<group>";
 		};
-		E896969C26551A21009A6126 /* testUITests */ = {
+		E896969C26551A21009A6126 /* SpaceXUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E896969D26551A21009A6126 /* testUITests.swift */,
+				E896969D26551A21009A6126 /* SpaceXUITests.swift */,
 				E896969F26551A21009A6126 /* Info.plist */,
 			);
-			path = testUITests;
+			path = SpaceXUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E896967326551A20009A6126 /* Build configuration list for PBXProject "Space" */;
+			buildConfigurationList = E896967326551A20009A6126 /* Build configuration list for PBXProject "SpaceX" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -316,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E896969326551A21009A6126 /* testTests.swift in Sources */,
+				E896969326551A21009A6126 /* SpaceXTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E896969E26551A21009A6126 /* testUITests.swift in Sources */,
+				E896969E26551A21009A6126 /* SpaceXUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,12 +485,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = test/Info.plist;
+				GCC_PREFIX_HEADER = SpaceX;
+				INFOPLIST_FILE = SpaceX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jgj.test;
+				PRODUCT_BUNDLE_IDENTIFIER = SpaceX.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,12 +504,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = test/Info.plist;
+				GCC_PREFIX_HEADER = SpaceX;
+				INFOPLIST_FILE = SpaceX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jgj.test;
+				PRODUCT_BUNDLE_IDENTIFIER = SpaceX.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,7 +600,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E896967326551A20009A6126 /* Build configuration list for PBXProject "Space" */ = {
+		E896967326551A20009A6126 /* Build configuration list for PBXProject "SpaceX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E89696A026551A21009A6126 /* Debug */,
