@@ -16,7 +16,7 @@
 		E89427A2265AE93A00573F37 /* DragonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89427A1265AE93A00573F37 /* DragonDetailsViewController.swift */; };
 		E896967C26551A20009A6126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896967B26551A20009A6126 /* AppDelegate.swift */; };
 		E896967E26551A20009A6126 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896967D26551A20009A6126 /* SceneDelegate.swift */; };
-		E896968026551A20009A6126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896967F26551A20009A6126 /* ViewController.swift */; };
+		E896968026551A20009A6126 /* DragonsListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896967F26551A20009A6126 /* DragonsListViewContoller.swift */; };
 		E896968326551A20009A6126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E896968126551A20009A6126 /* Main.storyboard */; };
 		E896968526551A21009A6126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E896968426551A21009A6126 /* Assets.xcassets */; };
 		E896968826551A21009A6126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E896968626551A21009A6126 /* LaunchScreen.storyboard */; };
@@ -55,7 +55,7 @@
 		E896967826551A20009A6126 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E896967B26551A20009A6126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E896967D26551A20009A6126 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E896967F26551A20009A6126 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E896967F26551A20009A6126 /* DragonsListViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonsListViewContoller.swift; sourceTree = "<group>"; };
 		E896968226551A20009A6126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E896968426551A21009A6126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E896968726551A21009A6126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +98,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8545FA32663A6D3008344A4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E896968126551A20009A6126 /* Main.storyboard */,
+				E896968626551A21009A6126 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E8545FA42663A6E5008344A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E847F003265ADCD20061655A /* DragonCell.swift */,
+				E8C413D4265C22570019ABBB /* DragonImageCell.swift */,
+				E8C413D5265C22570019ABBB /* DragonImageCell.xib */,
+				E847F004265ADCD20061655A /* DragonCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E8545FA52663A735008344A4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E8089D8E2655995B001F7DFB /* Dragon.swift */,
+				E8089D982655A231001F7DFB /* HeightWithTrunk.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E8545FA62663A753008344A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E8089D9326559C95001F7DFB /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E896966F26551A20009A6126 = {
 			isa = PBXGroup;
 			children = (
@@ -121,21 +158,15 @@
 		E896967A26551A20009A6126 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				E8545FA62663A753008344A4 /* Services */,
+				E8545FA52663A735008344A4 /* Entity */,
+				E8545FA42663A6E5008344A4 /* Cells */,
+				E8545FA32663A6D3008344A4 /* Storyboards */,
+				E8FB246B2663A636008EACAE /* Screens */,
 				E896967B26551A20009A6126 /* AppDelegate.swift */,
 				E896967D26551A20009A6126 /* SceneDelegate.swift */,
-				E896967F26551A20009A6126 /* ViewController.swift */,
-				E89427A1265AE93A00573F37 /* DragonDetailsViewController.swift */,
-				E8C413D4265C22570019ABBB /* DragonImageCell.swift */,
-				E8C413D5265C22570019ABBB /* DragonImageCell.xib */,
-				E8089D9326559C95001F7DFB /* NetworkManager.swift */,
-				E8089D982655A231001F7DFB /* HeightWithTrunk.swift */,
-				E8089D8E2655995B001F7DFB /* Dragon.swift */,
-				E896968126551A20009A6126 /* Main.storyboard */,
 				E896968426551A21009A6126 /* Assets.xcassets */,
-				E896968626551A21009A6126 /* LaunchScreen.storyboard */,
 				E896968926551A21009A6126 /* Info.plist */,
-				E847F003265ADCD20061655A /* DragonCell.swift */,
-				E847F004265ADCD20061655A /* DragonCell.xib */,
 				E8FB24602663A556008EACAE /* README.md */,
 			);
 			path = SpaceX;
@@ -157,6 +188,15 @@
 				E896969F26551A21009A6126 /* Info.plist */,
 			);
 			path = SpaceXUITests;
+			sourceTree = "<group>";
+		};
+		E8FB246B2663A636008EACAE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E89427A1265AE93A00573F37 /* DragonDetailsViewController.swift */,
+				E896967F26551A20009A6126 /* DragonsListViewContoller.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C413D6265C22570019ABBB /* DragonImageCell.swift in Sources */,
-				E896968026551A20009A6126 /* ViewController.swift in Sources */,
+				E896968026551A20009A6126 /* DragonsListViewContoller.swift in Sources */,
 				E847F005265ADCD20061655A /* DragonCell.swift in Sources */,
 				E8089D992655A231001F7DFB /* HeightWithTrunk.swift in Sources */,
 				E896967C26551A20009A6126 /* AppDelegate.swift in Sources */,
