@@ -29,7 +29,13 @@ class DragonDetailsViewController: UIViewController, UICollectionViewDataSource,
         let nib = UINib.init(nibName: cellReuseIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellReuseIdentifier)
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.tintColor = .black
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dragon?.images.count ?? 0
     }
@@ -39,6 +45,7 @@ class DragonDetailsViewController: UIViewController, UICollectionViewDataSource,
         cell.setup(imageURL: dragon?.images[indexPath.row])
         return cell
     }
+    
     @IBAction func wikiLinkAction(_ sender: Any) {
         guard let wikipedia = dragon?.wikipedia else { return }
         UIApplication.shared.open(wikipedia)
