@@ -15,13 +15,10 @@ class DragonsListViewContoller: UIViewController, UITableViewDelegate, UITableVi
     private var dragons: [Dragon] = []
     private var selectedDragon: Dragon?
     private let pullToRefresh = UIRefreshControl()
-    
-    let cellReuseIdentifier = "DragonCell"
+    private let cellReuseIdentifier = "DragonCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.backgroundView = pullToRefresh
         pullToRefresh.addTarget(self, action: #selector(loadDragonList), for: .valueChanged)
         tableView.refreshControl = pullToRefresh
         pullToRefresh.tintColor = .white
@@ -43,7 +40,6 @@ class DragonsListViewContoller: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @objc func loadDragonList() {
-        
         networkManager.getDragonList { dragonsResult in
             debugPrint(dragonsResult)
             self.dragons = dragonsResult

@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkManager {
     
-    let backendServer = "https://api.spacexdata.com"
+    private let backendServer = "https://api.spacexdata.com"
     
     func getDragon(id: String) {
         let request = AF.request("\(backendServer)/v4/dragons/\(id)")
