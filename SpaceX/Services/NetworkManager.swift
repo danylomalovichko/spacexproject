@@ -12,6 +12,7 @@ class NetworkManager {
     
     private let backendServer = "https://api.spacexdata.com"
     
+    // TODO: add completion
     func getDragon(id: String) {
         let request = AF.request("\(backendServer)/v4/dragons/\(id)")
         request.validate()
@@ -21,7 +22,7 @@ class NetworkManager {
             }
     }
     
-    func getDragonList(completion: @escaping ([Dragon])->()) {
+    func getDragonList(completion: @escaping ([Dragon]) -> ()) {
         let request = AF.request("\(backendServer)/v4/dragons/")
         request.responseJSON { response in
             guard let dragonsData = response.data else {

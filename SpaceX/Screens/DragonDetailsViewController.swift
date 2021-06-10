@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DragonDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
+class DragonDetailsViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -35,7 +35,14 @@ class DragonDetailsViewController: UIViewController, UICollectionViewDataSource,
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationController?.navigationBar.tintColor = .black
     }
+    
+    @IBAction func wikiLinkAction(_ sender: Any) {
+        guard let wikipedia = dragon?.wikipedia else { return }
+        UIApplication.shared.open(wikipedia)
+    }
+}
 
+extension DragonDetailsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dragon?.images.count ?? 0
     }
@@ -46,12 +53,7 @@ class DragonDetailsViewController: UIViewController, UICollectionViewDataSource,
         return cell
     }
     
-    @IBAction func wikiLinkAction(_ sender: Any) {
-        guard let wikipedia = dragon?.wikipedia else { return }
-        UIApplication.shared.open(wikipedia)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.bounds.size 
+        return collectionView.bounds.size
     }
 }

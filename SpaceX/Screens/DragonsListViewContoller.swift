@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DragonsListViewContoller: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DragonsListViewContoller: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -48,10 +48,6 @@ class DragonsListViewContoller: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dragons.count
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -59,7 +55,9 @@ class DragonsListViewContoller: UIViewController, UITableViewDelegate, UITableVi
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-    
+}
+
+extension DragonsListViewContoller: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! DragonCell
@@ -73,6 +71,9 @@ class DragonsListViewContoller: UIViewController, UITableViewDelegate, UITableVi
         selectedDragon = dragons[indexPath.row]
         performSegue(withIdentifier: "toDragonDetails", sender: self)
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dragons.count
+    }
 }
-
 
